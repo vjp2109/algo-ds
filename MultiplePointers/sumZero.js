@@ -30,13 +30,15 @@
 //   }
 // }
 
+// Their solution - I was able to solve this on my own just as he was talking it through good job VP BIG O = Time Complexity - O(n) Linear - Space Complexity O(1)
 function sumZero(arr) {
   let left = 0;
   let right = arr.length - 1;
   while (left < right) {
-    if (arr[left] + arr[right] === 0) {
+    let sum = arr[left] + arr[right];
+    if (sum === 0) {
       return [arr[left], arr[right]];
-    } else if (arr[left] + arr[right] > 0) {
+    } else if (sum > 0) {
       right--;
     } else {
       left++;
