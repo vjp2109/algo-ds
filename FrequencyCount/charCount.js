@@ -17,16 +17,13 @@ function charCount(str) {
 */
 
 // fastest way - with helper function, more code, but faster
+
 function charCount(str) {
   let obj = {};
   for (let letter of str) {
     letter = letter.toLowerCase();
     if (isAlphaNumeric(letter)) {
-      if (!obj[letter]) {
-        obj[letter] = 1;
-      } else {
-        obj[letter]++;
-      }
+      obj[letter] = ++obj[letter] || 1;
     }
   }
   console.log(obj);

@@ -22,29 +22,29 @@
 // }
 
 // Multiple pointers Big O = Time O(n log n) Space O(1)
-// function areThereDuplicates(...args) {
-//   args.sort(); // Sort the elements in ascending order
+function areThereDuplicates(...args) {
+  args.sort(); // Sort the elements in ascending order
 
-//   let pointer1 = 0;
-//   let pointer2 = 1;
+  let pointer1 = 0;
+  let pointer2 = 1;
 
-//   while (pointer2 < args.length) {
-//     if (args[pointer1] === args[pointer2]) {
-//       return true; // Found a duplicate
-//     }
+  while (pointer2 < args.length) {
+    if (args[pointer1] === args[pointer2]) {
+      return true; // Found a duplicate
+    }
 
-//     pointer1++;
-//     pointer2++;
-//   }
+    pointer1++;
+    pointer2++;
+  }
 
-//   return false; // No duplicates found
-// }
+  return false; // No duplicates found
+}
+
+console.log(areThereDuplicates(1, 2, 3)); // false
+console.log(areThereDuplicates(1, 2, 2)); // true
+console.log(areThereDuplicates("a", "b", "c", "a")); // true
 
 // Fancy one liner
 // function areThereDuplicates() {
 //   return new Set(arguments).size !== arguments.length;
 // }
-
-// console.log(areThereDuplicates(1, 2, 3)); // false
-// console.log(areThereDuplicates(1, 2, 2)); // true
-// console.log(areThereDuplicates("a", "b", "c", "a")); // true
