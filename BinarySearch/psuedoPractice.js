@@ -1,3 +1,4 @@
+// best we can do on a sorted Array
 function binarySearch(arr, n) {
   let left = 0;
   let right = arr.length - 1;
@@ -11,7 +12,7 @@ function binarySearch(arr, n) {
     } else if (currElem < n) {
       left = ++middle;
     } else if (currElem > n) {
-      right = ++middle;
+      right = --middle;
     }
   }
   return -1;
